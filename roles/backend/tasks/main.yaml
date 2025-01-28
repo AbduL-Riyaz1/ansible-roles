@@ -12,7 +12,7 @@
   - nodejs
   - mysql
 
-- name: Add user
+- name: Add expense user
   ansible.builtin.user:
     name: expense
 
