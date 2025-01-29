@@ -1,8 +1,3 @@
-- name: install MYSQL server
-  ansible.builtin.dnf:
-    name: mysql-server
-    state: installed
-
 - name: install mysql liblaries
   ansible.builtin.pip:
     name: "{{ item }}"
@@ -11,6 +6,10 @@
   - PyMySQL
   - cryptography
 
+  - name: install MYSQL server
+  ansible.builtin.dnf:
+    name: mysql-server
+    state: installed
 
 - name: start and enable mysql-server
   ansible.builtin.service:
