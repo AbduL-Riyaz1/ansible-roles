@@ -6,7 +6,7 @@
   - PyMySQL
   - cryptography
 
-  - name: install MYSQL server
+- name: install MYSQL server
   ansible.builtin.dnf:
     name: mysql-server
     state: installed
